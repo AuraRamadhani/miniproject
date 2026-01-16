@@ -91,6 +91,12 @@ nav a.active {
   height: 50px;
   object-fit: contain;
 }
+.profile-banner img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  margin: 20px 0;
+}
 
 /* Circle umum */
 .circle {
@@ -193,3 +199,4 @@ footer {
     align-items: center;
   }
 }
+
