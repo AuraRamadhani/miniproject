@@ -1,213 +1,133 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
 
-  <!-- WAJIB 1 CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="Logo_revou.png" alt="Logo" />
+        </div>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="Logo_revou.png" alt="Logo" />
+        <nav>
+          <a href="#home" class="active">Home</a>
+          <a href="#profile">Our Profile</a>
+          <a href="#profile">Portfolio</a>
+          <a href="#message">Message Us</a>
+        </nav>
       </div>
+    </header>
 
-      <nav>
-        <a href="#home" class="active">Home</a>
-        <a href="#profile">Our Profile</a>
-        <a href="#profile">Portfolio</a>
-        <a href="#message">Message Us</a>
-      </nav>
-    </div>
-  </header>
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Hi Hario Ifanny, Welcome To Website</h1>
+        <p>Ini adalah website terbaik pertama</p>
 
-  <!-- ===== HOME ===== -->
-  <section class="hero" id="home">
-    <div class="container">
-
-      <!-- Bagian wajib: Hi Name dari JS -->
-      <h1 id="greeting">Hi Name, Welcome To Website</h1>
-
-      <p>Ini adalah website terbaik pertama</p>
-
-      <!-- Photo Banner wajib -->
-      <div class="banner-placeholder">
-        1366 x 578
+        <!-- TEMPAT BANNER KOSONG -->
+        <div class="banner-placeholder">1366 x 578</div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- ===== OUR PROFILE ===== -->
-  <section class="profile" id="profile">
-    <div class="container">
-
-      <h2>Our Profile</h2>
-
-      <!-- Photo Banner Profile -->
-      <div class="banner-placeholder">
-        Photo Banner Perusahaan
-      </div>
-
-      <!-- About Company -->
-      <div class="about">
-        <h3>About The Company</h3>
-        <p>
-          Perusahaan kami adalah perusahaan yang bergerak di bidang teknologi
-          dan layanan digital yang berfokus pada pengembangan solusi kreatif
-          untuk membantu kebutuhan masyarakat modern.
-        </p>
-      </div>
-
-      <!-- Vision Mission -->
-      <div class="vision">
-        <h3>Vision</h3>
-        <p>
-          Menjadi perusahaan teknologi terdepan yang memberikan dampak positif
-          bagi masyarakat melalui inovasi digital.
-        </p>
-
-        <h3>Mission</h3>
-        <ul>
-          <li>Mengembangkan layanan digital berkualitas</li>
-          <li>Mengutamakan kepuasan pengguna</li>
-          <li>Mendorong inovasi berkelanjutan</li>
-        </ul>
-      </div>
-
-      <!-- Headquarter -->
-      <div class="headquarter">
-        <h3>Our Headquarter</h3>
+    <section class="headquarter" id="profile">
+      <div class="container">
+        <h2>Our Headquarter</h2>
 
         <div class="locations">
-
           <div class="location">
             <div class="circle">
-              <img src="jakarta.jpg" alt="Jakarta" />
+              <img src="jakarta.jpg" alt="Jakarta">
             </div>
             <p>Jakarta</p>
           </div>
 
           <div class="location">
             <div class="circle">
-              <img src="bandung.jpg" alt="Bandung" />
+              <img src="bandung.jpg" alt="Bandung">
             </div>
             <p>Bandung</p>
           </div>
 
           <div class="location">
             <div class="circle">
-              <img src="surabaya.jpeg" alt="Surabaya" />
+              <img src="surabaya.jpeg" alt="Surabaya">
             </div>
             <p>Surabaya</p>
           </div>
-
         </div>
       </div>
+    </section>
+   
+    <section class="message-us" id="message">
+      <div class="container">
+        <h2>Message Us</h2>
 
-    </div>
-  </section>
-
-  <!-- ===== MESSAGE US ===== -->
-  <section class="message-us" id="message">
-    <div class="container">
-
-      <h2>Message Us</h2>
-
-      <div class="message-content">
-
-        <!-- FORM -->
-        <div class="form-side">
-          <form id="messageForm">
-
-            <div class="form-group">
-              <label>Nama</label>
-              <input type="text" id="nama" placeholder="Nama" required />
-            </div>
-
-            <div class="form-group">
-              <label>Tanggal Lahir</label>
-              <input type="date" id="tanggalLahir" required />
-            </div>
-
-            <div class="form-group">
-              <label>Jenis Kelamin</label>
-
-              <div class="radio-group">
-                <label>
-                  <input type="radio" name="gender" value="Laki-Laki" checked />
-                  Laki-Laki
-                </label>
-
-                <label>
-                  <input type="radio" name="gender" value="Perempuan" />
-                  Perempuan
-                </label>
+        <div class="message-content">
+          <div class="form-side">
+            <form id="messageForm">
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" id="nama" placeholder="Nama" />
               </div>
+
+              <div class="form-group">
+                <label>Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir" />
+              </div>
+
+              <div class="form-group">
+                <label>Jenis Kelamin</label>
+
+                <div class="radio-group">
+                  <label>
+                    <input type="radio" name="gender" value="Laki-Laki" checked />
+                    Laki-Laki
+                  </label>
+
+                  <label>
+                    <input type="radio" name="gender" value="Perempuan" />
+                    Perempuan
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Pesan</label>
+                <textarea id="pesan" rows="4"></textarea>
+              </div>
+
+              <button class="submit-btn">Submit</button>
+            </form>
+          </div>
+
+          <div class="info-side">
+            <div class="info-box">
+              <p><strong>Current time:</strong> <span id="currentTime">-</span></p>
+
+              <p><strong>Nama:</strong> <span id="displayNama">Muhammad Hario Ifanny El Jalalludin R</span></p>
+
+              <p><strong>Tanggal Lahir:</strong> <span id="displayTanggal">11/12/2004</span></p>
+
+              <p><strong>Jenis Kelamin:</strong> <span id="displayGender">Laki-Laki</span></p>
+
+              <p><strong>Pesan:</strong> <span id="displayPesan">Lagi belajar buat Website</span></p>
             </div>
-
-            <div class="form-group">
-              <label>Pesan</label>
-              <textarea id="pesan" rows="4" required></textarea>
-            </div>
-
-            <button class="submit-btn">Submit</button>
-
-          </form>
-        </div>
-
-        <!-- OUTPUT -->
-        <div class="info-side">
-          <div class="info-box">
-
-            <p>
-              <strong>Current time:</strong>
-              <span id="currentTime">-</span>
-            </p>
-
-            <p>
-              <strong>Nama:</strong>
-              <span id="displayNama">-</span>
-            </p>
-
-            <p>
-              <strong>Tanggal Lahir:</strong>
-              <span id="displayTanggal">-</span>
-            </p>
-
-            <p>
-              <strong>Jenis Kelamin:</strong>
-              <span id="displayGender">-</span>
-            </p>
-
-            <p>
-              <strong>Pesan:</strong>
-              <span id="displayPesan">-</span>
-            </p>
-
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <p>Created By Hario Ifanny</p>
-    </div>
-  </footer>
+    <footer>
+      <div class="container">
+        <p>Created By Hario Ifanny</p>
+      </div>
+    </footer>
 
-  <!-- WAJIB 1 JS -->
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
