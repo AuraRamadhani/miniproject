@@ -100,20 +100,20 @@ nav a.active {
 
 /* ===== OUR PROFILE ===== */
 .headquarter {
-  padding: 80px 0;      
-  margin-top: 20px;       
+  padding: 50px 0;
 }
+
 .headquarter h2 {
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 /* CONTAINER UTAMA HQ */
 .locations {
   display: flex;
   justify-content: center;
-  margin-top: 40px;      
-  gap: 70px;  
+  gap: 50px;
+  margin-top: 25px;
 }
 
 /* ITEM TIAP KOTA */
@@ -266,4 +266,3 @@ footer {
     height: 85px;
   }
 }
-
