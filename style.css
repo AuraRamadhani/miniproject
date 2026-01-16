@@ -98,15 +98,15 @@ nav a.active {
 
 /* Gambar tiap kota */
 .jakarta {
-  background-image: url("..jakarta.jpg");
+  background-image: url("jakarta.jpg");
 }
 
 .bandung {
-  background-image: url("..bandung.jpg");
+  background-image: url("bandung.jpg");
 }
 
 .surabaya {
-  background-image: url("..surabaya.jpeg");
+  background-image: url("surabaya.jpeg");
 }
 
 .location p {
@@ -185,5 +185,6 @@ footer {
     align-items: center;
   }
 }
+
 
 
