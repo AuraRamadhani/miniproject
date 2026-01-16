@@ -1,138 +1,156 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">
-          <img src="Logo_revou.png" alt="Logo" />
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="Logo_revou.png" alt="Logo" />
+      </div>
+
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#message">Message Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Hi Hario Ifanny, Welcome To Website</h1>
+      <p>Ini adalah website terbaik pertama</p>
+
+      <div class="banner-placeholder">1366 x 578</div>
+    </div>
+  </section>
+
+  <section class="headquarter" id="profile">
+    <div class="container">
+      <h2>Our Headquarter</h2>
+
+      <div class="locations">
+        <div class="location">
+          <div class="circle">
+            <img src="jakarta.jpg" alt="Jakarta">
+          </div>
+          <p>Jakarta</p>
         </div>
 
-        <nav>
-          <a href="#home" class="active">Home</a>
-          <a href="#profile">Our Profile</a>
-          <a href="#profile">Portfolio</a>
-          <a href="#message">Message Us</a>
-        </nav>
-      </div>
-    </header>
-
-    <section class="hero" id="home">
-      <div class="container">
-        <h1>Hi Hario Ifanny, Welcome To Website</h1>
-        <p>Ini adalah website terbaik pertama</p>
-
-        <!-- TEMPAT BANNER KOSONG -->
-        <div class="banner-placeholder">1366 x 578</div>
-      </div>
-    </section>
-
-    <section class="headquarter" id="profile">
-      <div class="container">
-        <h2>Our Headquarter</h2>
-
-        <div class="locations">
-          <div class="location">
-            <div class="circle">
-              <img src="jakarta.jpg" alt="Jakarta">
-            </div>
-            <p>Jakarta</p>
+        <div class="location">
+          <div class="circle">
+            <img src="bandung.jpg" alt="Bandung">
           </div>
+          <p>Bandung</p>
+        </div>
 
-          <div class="location">
-            <div class="circle">
-              <img src="bandung.jpg" alt="Bandung">
-            </div>
-            <p>Bandung</p>
+        <div class="location">
+          <div class="circle">
+            <img src="surabaya.jpeg" alt="Surabaya">
           </div>
+          <p>Surabaya</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="location">
-            <div class="circle">
-              <img src="surabaya.jpeg" alt="Surabaya">
+  <!-- TAMBAHAN PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+
+      <div class="portfolio-list">
+        <div class="portfolio-item">
+          <h3>Website Project</h3>
+          <p>Project pembuatan website pertama menggunakan HTML, CSS, dan JavaScript.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <h3>UI Design</h3>
+          <p>Desain tampilan aplikasi menggunakan Figma.</p>
+        </div>
+
+        <div class="portfolio-item">
+          <h3>System Analysis</h3>
+          <p>Analisis kebutuhan sistem informasi berbasis web.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="message-us" id="message">
+    <div class="container">
+      <h2>Message Us</h2>
+
+      <div class="message-content">
+        <div class="form-side">
+          <form id="messageForm">
+            <div class="form-group">
+              <label>Nama</label>
+              <input type="text" id="nama" placeholder="Nama" />
             </div>
-            <p>Surabaya</p>
+
+            <div class="form-group">
+              <label>Tanggal Lahir</label>
+              <input type="date" id="tanggalLahir" />
+            </div>
+
+            <div class="form-group">
+              <label>Jenis Kelamin</label>
+
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="gender" value="Laki-Laki" checked />
+                  Laki-Laki
+                </label>
+
+                <label>
+                  <input type="radio" name="gender" value="Perempuan" />
+                  Perempuan
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea id="pesan" rows="4"></textarea>
+            </div>
+
+            <button class="submit-btn">Submit</button>
+          </form>
+        </div>
+
+        <div class="info-side">
+          <div class="info-box">
+            <p><strong>Current time:</strong> <span id="currentTime">-</span></p>
+
+            <p><strong>Nama:</strong> <span id="displayNama">Muhammad Hario Ifanny El Jalalludin R</span></p>
+
+            <p><strong>Tanggal Lahir:</strong> <span id="displayTanggal">11/12/2004</span></p>
+
+            <p><strong>Jenis Kelamin:</strong> <span id="displayGender">Laki-Laki</span></p>
+
+            <p><strong>Pesan:</strong> <span id="displayPesan">Lagi belajar buat Website</span></p>
           </div>
         </div>
       </div>
-    </section>
-   
-    <section class="message-us" id="message">
-      <div class="container">
-        <h2>Message Us</h2>
+    </div>
+  </section>
 
-        <div class="message-content">
-          <div class="form-side">
-            <form id="messageForm">
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" id="nama" placeholder="Nama" />
-              </div>
+  <footer>
+    <div class="container">
+      <p>Created By Hario Ifanny</p>
+    </div>
+  </footer>
 
-              <div class="form-group">
-                <label>Tanggal Lahir</label>
-                <input type="date" id="tanggalLahir" />
-              </div>
-
-              <div class="form-group">
-                <label>Jenis Kelamin</label>
-
-                <div class="radio-group">
-                  <label>
-                    <input type="radio" name="gender" value="Laki-Laki" checked />
-                    Laki-Laki
-                  </label>
-
-                  <label>
-                    <input type="radio" name="gender" value="Perempuan" />
-                    Perempuan
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label>Pesan</label>
-                <textarea id="pesan" rows="4"></textarea>
-              </div>
-
-              <button class="submit-btn">Submit</button>
-            </form>
-          </div>
-
-          <div class="info-side">
-            <div class="info-box">
-              <p><strong>Current time:</strong> <span id="currentTime">-</span></p>
-
-              <p><strong>Nama:</strong> <span id="displayNama">Muhammad Hario Ifanny El Jalalludin R</span></p>
-
-              <p><strong>Tanggal Lahir:</strong> <span id="displayTanggal">11/12/2004</span></p>
-
-              <p><strong>Jenis Kelamin:</strong> <span id="displayGender">Laki-Laki</span></p>
-
-              <p><strong>Pesan:</strong> <span id="displayPesan">Lagi belajar buat Website</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>Created By Hario Ifanny</p>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
-
-
-
-
-
