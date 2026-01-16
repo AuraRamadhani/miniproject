@@ -4,7 +4,7 @@ html {
 }
 
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 70px;
 }
 
 * {
@@ -16,6 +16,7 @@ section {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: #ffffff;
 }
 
 .container {
@@ -27,7 +28,11 @@ body {
 /* ===== HEADER ===== */
 header {
   border-bottom: 1px solid #ddd;
-  padding: 12px 0;
+  padding: 10px 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .container {
@@ -37,12 +42,12 @@ header .container {
 }
 
 .logo img {
-  width: 50px;
+  width: 48px;
 }
 
 nav {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 nav a {
@@ -51,6 +56,11 @@ nav a {
   border: 1px solid #ccc;
   padding: 6px 12px;
   font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #f0f0f0;
 }
 
 nav a.active {
@@ -59,12 +69,18 @@ nav a.active {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 60px 0;
+  padding: 50px 0;
   background: #f9f9f9;
 }
 
 .hero h1 {
   margin-bottom: 6px;
+  font-size: 24px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: #555;
 }
 
 .banner-placeholder {
@@ -78,24 +94,26 @@ nav a.active {
   justify-content: center;
 
   color: #666;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 /* ===== OUR PROFILE ===== */
 .headquarter {
-  padding: 60px 0;
+  padding: 80px 0;      
+  margin-top: 20px;       
 }
-
 .headquarter h2 {
-  text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 /* CONTAINER UTAMA HQ */
 .locations {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
+  margin-top: 40px;      
+  gap: 70px;  
 }
 
 /* ITEM TIAP KOTA */
@@ -103,12 +121,17 @@ nav a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.3s;
+}
+
+.location:hover {
+  transform: translateY(-3px);
 }
 
 /* LINGKARAN GAMBAR */
 .circle {
-  width: 110px;
-  height: 110px;
+  width: 95px;
+  height: 95px;
 
   border-radius: 50%;
   overflow: hidden;
@@ -125,76 +148,84 @@ nav a.active {
 
 /* NAMA KOTA */
 .location p {
-  margin-top: 8px;
-  font-size: 15px;
+  margin-top: 6px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 /* ===== ABOUT COMPANY ===== */
 .about-company {
-  padding: 50px 0;
+  padding: 45px 0;
   background: #f9f9f9;
   text-align: center;
 }
 
 .about-company p {
-  max-width: 900px;
+  max-width: 850px;
   margin: 10px auto;
+  font-size: 15px;
+  color: #444;
 }
 
 /* ===== VISION MISSION ===== */
 .vision-mission {
-  padding: 50px 0;
+  padding: 45px 0;
 }
 
 .vm-wrapper {
   display: flex;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .vm-box {
   border: 1px solid #ddd;
   padding: 15px;
-  width: 400px;
+  width: 380px;
   background: white;
+  border-radius: 6px;
 }
 
 .vm-box h3 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* ===== MESSAGE ===== */
 .message-us {
-  padding: 50px 0;
+  padding: 45px 0;
   background: #f9f9f9;
 }
 
 .message-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 25px;
 }
 
 .form-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .radio-group {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  margin-top: 4px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 8px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .submit-btn {
   width: 100%;
   padding: 8px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 /* ===== RESULT ===== */
@@ -202,13 +233,15 @@ textarea {
   border: 1px solid #ddd;
   padding: 15px;
   background: white;
+  border-radius: 6px;
 }
 
 /* ===== FOOTER ===== */
 footer {
   text-align: right;
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 13px;
+  color: #555;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -216,14 +249,20 @@ footer {
 
   .locations {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
   }
 
   .vm-wrapper {
     flex-direction: column;
+    align-items: center;
   }
 
   .message-content {
     grid-template-columns: 1fr;
+  }
+
+  .circle {
+    width: 85px;
+    height: 85px;
   }
 }
