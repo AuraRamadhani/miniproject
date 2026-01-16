@@ -1,6 +1,6 @@
 function updateTime() {
   const now = new Date();
-  document.getElementById("currentTime").innerText = now;
+  document.getElementById("currentTime").innerText = now.toLocaleString();
 }
 
 updateTime();
@@ -9,20 +9,31 @@ setInterval(updateTime, 1000);
 document.getElementById("messageForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const nama = nama.value;
-  const tanggal = tanggalLahir.value;
-  const gender = document.querySelector("input[name=gender]:checked").value;
+  // AMBIL VALUE DARI INPUT
+  const namaInput = document.getElementById("nama").value;
+  const tanggalInput = document.getElementById("tanggalLahir").value;
+  const genderInput = document.querySelector("input[name=gender]:checked").value;
+  const pesanInput = document.getElementById("pesan").value;
 
-  const pesan = pesan.value;
+  // TAMPILKAN KE BOX KANAN
+  document.getElementById("displayNama").innerText = namaInput || "-";
+  document.getElementById("displayGender").innerText = genderInput;
+  document.getElementById("displayPesan").innerText = pesanInput || "-";
 
-  displayNama.innerText = nama || "-";
-  displayGender.innerText = gender;
-  displayPesan.innerText = pesan || "-";
+  // FORMAT TANGGAL
+  if (tanggalInput) {
+    let d = new Date(tanggalInput);
 
-  if (tanggal) {
-    let d = new Date(tanggal);
+    const formatTanggal =
+      d.getDate() +
+      "/" +
+      (d.getMonth() + 1) +
+      "/" +
+      d.getFullYear();
 
-    displayTanggal.innerText = d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+    document.getElementById("displayTanggal").innerText = formatTanggal;
+  } else {
+    document.getElementById("displayTanggal").innerText = "-";
   }
 
   alert("Pesan berhasil dikirim!");
