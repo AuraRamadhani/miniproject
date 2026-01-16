@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  border-bottom: 2px solid #ddd;
+  padding: 15px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+}
+
+nav a.active {
+  background: #eee;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+.hero .container {
+  text-align: left;
+}
+
+.banner-placeholder {
+  height: 20px;
+  margin: 220px auto;
+
+  text-align: center;
+}
+
+/* HQ */
+.headquarter {
+  padding: 60px 0;
+}
+/* ===== HEADQUARTER FIX ===== */
+
+.locations {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 30px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Logo */
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Circle umum */
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ccc;
+}
+
+/* Gambar tiap kota */
+.jakarta {
+  background-image: url("../images/jakarta.jpg");
+}
+
+.bandung {
+  background-image: url("../images/bandung.jpg");
+}
+
+.surabaya {
+  background-image: url("../images/surabaya.jpeg");
+}
+
+.location p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* MESSAGE */
+.message-us {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.message-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* FIX RADIO BUTTON BIAR RAPI */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  width: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+}
+
+/* RESULT */
+.info-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: right;
+  padding: 15px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .message-content {
+    grid-template-columns: 1fr;
+  }
+
+  .locations {
+    flex-direction: column;
+    align-items: center;
+  }
+}
