@@ -1,68 +1,77 @@
-// ===== UPDATE JAM REALTIME =====
+// ===== GREETING HI NAME =====
+let user = prompt("Masukkan nama kamu:");
+if (user) {
+  document.getElementById("greeting").innerText =
+    "Hi " + user + ", Welcome To Website";
+}
+
+// ===== UPDATE WAKTU =====
 function updateTime() {
   const now = new Date();
-  document.getElementById("currentTime").innerText = now.toLocaleString("id-ID");
+  document.getElementById("currentTime").innerText =
+    now.toLocaleString();
 }
 
 updateTime();
 setInterval(updateTime, 1000);
 
-// ===== SUBMIT FORM =====
-document.getElementById("messageForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const namaInput = document.getElementById("nama").value.trim();
-  const tanggalInput = document.getElementById("tanggalLahir").value;
-  const genderInput = document.querySelector("input[name=gender]:checked").value;
-  const pesanInput = document.getElementById("pesan").value.trim();
-
-  // VALIDASI SEDERHANA
-  if (namaInput === "" || pesanInput === "") {
-    alert("Nama dan Pesan wajib diisi ya!");
-    return;
-  }
-
-  // TAMPILKAN HASIL
-  document.getElementById("displayNama").innerText = namaInput;
-  document.getElementById("displayGender").innerText = genderInput;
-  document.getElementById("displayPesan").innerText = pesanInput;
-
-  // FORMAT TANGGAL
-  if (tanggalInput) {
-    let d = new Date(tanggalInput);
-
-    const formatTanggal =
-      d.getDate() +
-      "/" +
-      (d.getMonth() + 1) +
-      "/" +
-      d.getFullYear();
-
-    document.getElementById("displayTanggal").innerText = formatTanggal;
-  } else {
-    document.getElementById("displayTanggal").innerText = "-";
-  }
-
-  alert("Pesan berhasil dikirim!");
-
-  // RESET FORM
-  document.getElementById("messageForm").reset();
-});
-
-// ===== SMOOTH SCROLL NAVIGATION =====
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", function (e) {
+// ===== FORM SUBMIT =====
+document
+  .getElementById("messageForm")
+  .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const tujuan = document.querySelector(this.getAttribute("href"));
+    const namaInput = document.getElementById("nama").value;
+    const tanggalInput =
+      document.getElementById("tanggalLahir").value;
 
-    tujuan.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+    const genderInput = document.querySelector(
+      "input[name=gender]:checked"
+    ).value;
 
-    // efek active
-    document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+    const pesanInput =
+      document.getElementById("pesan").value;
+
+    // tampilkan ke kanan
+    document.getElementById("displayNama").innerText =
+      namaInput || "-";
+
+    document.getElementById("displayGender").innerText =
+      genderInput;
+
+    document.getElementById("displayPesan").innerText =
+      pesanInput || "-";
+
+    // format tanggal
+    if (tanggalInput) {
+      let d = new Date(tanggalInput);
+
+      const formatTanggal =
+        d.getDate() +
+        "/" +
+        (d.getMonth() + 1) +
+        "/" +
+        d.getFullYear();
+
+      document.getElementById(
+        "displayTanggal"
+      ).innerText = formatTanggal;
+    } else {
+      document.getElementById(
+        "displayTanggal"
+      ).innerText = "-";
+    }
+
+    alert("Pesan berhasil dikirim!");
+  });
+
+// ===== NAV ACTIVE AUTO =====
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", function () {
+    document
+      .querySelectorAll("nav a")
+      .forEach((a) => a.classList.remove("active"));
+
     this.classList.add("active");
   });
 });
